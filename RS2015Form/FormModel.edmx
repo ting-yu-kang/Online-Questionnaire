@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RS2015DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FormReply">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Sex" Type="nchar" MaxLength="4" Nullable="false" />
+          <Property Name="School" Type="nvarchar" MaxLength="50" />
+          <Property Name="Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="Grade" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="10" />
+          <Property Name="Q1" Type="int" Nullable="false" />
+          <Property Name="Q2" Type="int" Nullable="false" />
+          <Property Name="Q3" Type="int" Nullable="false" />
+          <Property Name="Q4-AA" Type="bit" Nullable="false" />
+          <Property Name="Q4-MAA" Type="bit" Nullable="false" />
+          <Property Name="Q4-SAA" Type="bit" Nullable="false" />
+          <Property Name="Q4-RDAA" Type="bit" Nullable="false" />
+          <Property Name="Q5" Type="nvarchar" MaxLength="500" />
+          <Property Name="Q6" Type="nvarchar" MaxLength="500" />
+          <Property Name="REG" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="RS2015DBModelStoreContainer">
+          <EntitySet Name="FormReply" EntityType="Self.FormReply" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RS2015DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FormReply">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sex" Type="String" MaxLength="4" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="School" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Grade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Q1" Type="Int32" Nullable="false" />
+          <Property Name="Q2" Type="Int32" Nullable="false" />
+          <Property Name="Q3" Type="Int32" Nullable="false" />
+          <Property Name="Q4_AA" Type="Boolean" Nullable="false" />
+          <Property Name="Q4_MAA" Type="Boolean" Nullable="false" />
+          <Property Name="Q4_SAA" Type="Boolean" Nullable="false" />
+          <Property Name="Q4_RDAA" Type="Boolean" Nullable="false" />
+          <Property Name="Q5" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Q6" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="REG" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="RS2015DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FormReplies" EntityType="Self.FormReply" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RS2015DBModelStoreContainer" CdmEntityContainer="RS2015DBEntities">
+          <EntitySetMapping Name="FormReplies">
+            <EntityTypeMapping TypeName="RS2015DBModel.FormReply">
+              <MappingFragment StoreEntitySet="FormReply">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="School" ColumnName="School" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Q1" ColumnName="Q1" />
+                <ScalarProperty Name="Q2" ColumnName="Q2" />
+                <ScalarProperty Name="Q3" ColumnName="Q3" />
+                <ScalarProperty Name="Q4_AA" ColumnName="Q4-AA" />
+                <ScalarProperty Name="Q4_MAA" ColumnName="Q4-MAA" />
+                <ScalarProperty Name="Q4_SAA" ColumnName="Q4-SAA" />
+                <ScalarProperty Name="Q4_RDAA" ColumnName="Q4-RDAA" />
+                <ScalarProperty Name="Q5" ColumnName="Q5" />
+                <ScalarProperty Name="Q6" ColumnName="Q6" />
+                <ScalarProperty Name="REG" ColumnName="REG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

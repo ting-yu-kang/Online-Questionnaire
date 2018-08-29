@@ -1,0 +1,15 @@
+﻿.ui-header .ui-title
+{
+	margin: .6em .6em
+}
+
+span
+{
+    color: #ff0000;
+}
+
+#grade-button span,
+#Label1
+{
+    color: #000;
+}
